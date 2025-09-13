@@ -1,3 +1,30 @@
-.env
+# Ambiente Virtual
 venv/
+env/
+*.venv
+.env
+
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Bases de Dados
+db.sqlite3
+*.sqlite3
+
+# Logs e Mídia
+logs/
+media/
+static/
+
+# Ficheiros de configuração
+.vscode
+.idea/
+.DS_Store
+
+# Ficheiros sensíveis
+# Adicione aqui ficheiros como .env que contenham senhas ou chaves de API
+# Se um ficheiro .env já foi adicionado, remova-o do cache primeiro:
+# git rm --cached .env
