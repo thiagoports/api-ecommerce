@@ -13,24 +13,17 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import environ
 
-# Initialize the environment variable reader
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 env = environ.Env(
-    # Define the type of variables
     DEBUG=(bool, False)
 )
 
-# Read the .env file
-environ.Env.read_env()
+# lê o arquivo .env
+environ.Env.read_env(BASE_DIR / ".env")
 
-# Get the SECRET_KEY from the .env file
-SECRET_KEY = env('SECRET_KEY')
-
-# Get the value of DEBUG (now it accepts a boolean)
-DEBUG = env('DEBUG')
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+SECRET_KEY = env("SECRET_KEY")
+DEBUG = env("DEBUG")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
