@@ -56,10 +56,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 REST_FRAMEWORK = {
-    'DEFAULT AUTHENTICATION_CLASSES': (
-        'rest framework simplejwt.authentication.JWTAuthentication'
-    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
 }
 
 ROOT_URLCONF = 'config.urls'
