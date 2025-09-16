@@ -1,0 +1,1984 @@
+[
+  {
+    "model": "app.category",
+    "pk": 1,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Eletrônicos", "description": "Produtos eletrônicos em geral." }
+  },
+  {
+    "model": "app.category",
+    "pk": 2,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Livros", "description": "Livros de todos os gêneros." }
+  },
+  {
+    "model": "app.category",
+    "pk": 3,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Moda", "description": "Roupas e acessórios." }
+  },
+  {
+    "model": "app.category",
+    "pk": 4,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Beleza", "description": "Cosméticos e cuidados pessoais." }
+  },
+  {
+    "model": "app.category",
+    "pk": 5,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Casa", "description": "Utensílios e decoração para casa." }
+  },
+  {
+    "model": "app.category",
+    "pk": 6,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Esportes", "description": "Artigos esportivos e acessórios." }
+  },
+  {
+    "model": "app.category",
+    "pk": 7,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Brinquedos", "description": "Brinquedos para todas as idades." }
+  },
+  {
+    "model": "app.category",
+    "pk": 8,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Alimentos", "description": "Produtos alimentícios e snacks." }
+  },
+  {
+    "model": "app.category",
+    "pk": 9,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Informática", "description": "Peças, periféricos e acessórios de informática." }
+  },
+  {
+    "model": "app.category",
+    "pk": 10,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Instrumentos Musicais", "description": "Guitarras, teclados e acessórios musicais." }
+  },
+  {
+    "model": "app.category",
+    "pk": 11,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Papelaria", "description": "Cadernos, canetas e material escolar." }
+  },
+  {
+    "model": "app.category",
+    "pk": 12,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "name": "Jardinagem", "description": "Ferramentas e insumos para jardinagem." }
+  },
+
+
+  {
+    "model": "app.product",
+    "pk": 1,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Fone de Ouvido Bluetooth",
+      "description": "Fone com cancelamento de ruído.",
+      "price": "199.90",
+      "stock": 150,
+      "category": 1
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 2,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Smartphone 6.5\" 128GB",
+      "description": "Tela OLED, câmera tripla.",
+      "price": "1299.00",
+      "stock": 45,
+      "category": 1
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 3,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Caixa de Som Portátil",
+      "description": "Resistente à água, som potente.",
+      "price": "249.50",
+      "stock": 70,
+      "category": 1
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 4,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Carregador Portátil 20.000mAh",
+      "description": "Carregamento rápido com duas portas USB.",
+      "price": "129.90",
+      "stock": 200,
+      "category": 1
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 5,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Relógio Smartwatch",
+      "description": "Monitor de batimentos, notificações, GPS.",
+      "price": "499.00",
+      "stock": 80,
+      "category": 1
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 6,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "O Senhor dos Anéis - Edição Capa Dura",
+      "description": "Trilogia completa em edição especial.",
+      "price": "89.90",
+      "stock": 120,
+      "category": 2
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 7,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Dom Casmurro",
+      "description": "Clássico da literatura brasileira.",
+      "price": "24.50",
+      "stock": 300,
+      "category": 2
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 8,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Python para Iniciantes",
+      "description": "Guia prático para aprender Python.",
+      "price": "59.90",
+      "stock": 90,
+      "category": 2
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 9,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Ciência em 10 Volumes",
+      "description": "Coleção educativa para jovens.",
+      "price": "199.00",
+      "stock": 40,
+      "category": 2
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 10,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Quadrinhos: Aventura Urbana",
+      "description": "História em quadrinhos independente.",
+      "price": "34.90",
+      "stock": 75,
+      "category": 2
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 11,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Camiseta Básica Algodão",
+      "description": "Camiseta confortável, várias cores.",
+      "price": "39.90",
+      "stock": 220,
+      "category": 3
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 12,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Jaqueta Jeans Masculina",
+      "description": "Modelagem moderna, vários tamanhos.",
+      "price": "149.90",
+      "stock": 60,
+      "category": 3
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 13,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Vestido Feminino Estampado",
+      "description": "Leve e fresco para o verão.",
+      "price": "119.00",
+      "stock": 50,
+      "category": 3
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 14,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Boné Trucker",
+      "description": "Estilo casual e ventilado.",
+      "price": "49.90",
+      "stock": 180,
+      "category": 3
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 15,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Relógio de Pulso Casual",
+      "description": "Pulseira em couro sintético.",
+      "price": "199.00",
+      "stock": 90,
+      "category": 3
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 16,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Creme Hidratante Facial",
+      "description": "Hidratação diária para todos os tipos de pele.",
+      "price": "39.90",
+      "stock": 240,
+      "category": 4
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 17,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Kit Maquiagem Básico",
+      "description": "Paleta, pincéis e batom.",
+      "price": "89.90",
+      "stock": 110,
+      "category": 4
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 18,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Shampoo 1L",
+      "description": "Limpeza suave e perfume prolongado.",
+      "price": "29.90",
+      "stock": 300,
+      "category": 4
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 19,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Óleo Corporal Relaxante",
+      "description": "Aromaterapia para relaxamento.",
+      "price": "59.50",
+      "stock": 95,
+      "category": 4
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 20,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Perfume 50ml",
+      "description": "Fragrância masculina elegante.",
+      "price": "149.90",
+      "stock": 40,
+      "category": 4
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 21,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Conjunto de Talheres 24 peças",
+      "description": "Aço inox, resistente.",
+      "price": "199.00",
+      "stock": 55,
+      "category": 5
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 22,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Jogo de Cama Queen",
+      "description": "Lençóis macios 4 peças.",
+      "price": "249.90",
+      "stock": 70,
+      "category": 5
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 23,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Luminária de Mesa",
+      "description": "LED com ajuste de intensidade.",
+      "price": "89.90",
+      "stock": 120,
+      "category": 5
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 24,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Jarra Térmica 1L",
+      "description": "Mantém bebidas quentes por horas.",
+      "price": "79.90",
+      "stock": 85,
+      "category": 5
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 25,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Tapete Sala 2x1.5m",
+      "description": "Macio e fácil de limpar.",
+      "price": "299.00",
+      "stock": 30,
+      "category": 5
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 26,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Bola de Futebol Oficial",
+      "description": "Tamanho 5, costurada.",
+      "price": "129.90",
+      "stock": 140,
+      "category": 6
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 27,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Tênis de Corrida",
+      "description": "Amortecimento e suporte.",
+      "price": "299.00",
+      "stock": 60,
+      "category": 6
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 28,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Mochila Esportiva 30L",
+      "description": "Compartimentos para roupa molhada.",
+      "price": "179.90",
+      "stock": 95,
+      "category": 6
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 29,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Corda de Pular Profissional",
+      "description": "Ajustável, rolamentos de alta velocidade.",
+      "price": "49.90",
+      "stock": 220,
+      "category": 6
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 30,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Kit Halteres 10kg",
+      "description": "Conjunto ajustável para treinos em casa.",
+      "price": "229.00",
+      "stock": 40,
+      "category": 6
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 31,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Quebra-cabeça 1000 peças",
+      "description": "Imagem paisagem natural.",
+      "price": "59.90",
+      "stock": 130,
+      "category": 7
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 32,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Boneca Articulada 30cm",
+      "description": "Roupinhas e acessórios inclusos.",
+      "price": "89.90",
+      "stock": 80,
+      "category": 7
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 33,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Carrinho de Controle Remoto",
+      "description": "Ideal para crianças a partir de 6 anos.",
+      "price": "149.90",
+      "stock": 65,
+      "category": 7
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 34,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Jogo de Tabuleiro Estratégia",
+      "description": "Para 2-4 jogadores.",
+      "price": "99.90",
+      "stock": 110,
+      "category": 7
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 35,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Pelúcia 40cm",
+      "description": "Muito macia e lavável.",
+      "price": "49.90",
+      "stock": 200,
+      "category": 7
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 36,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Cesta de Snacks",
+      "description": "Seleção de snacks sweet & salty.",
+      "price": "69.90",
+      "stock": 150,
+      "category": 8
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 37,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Café Torrado 500g",
+      "description": "Blend especial para espresso.",
+      "price": "29.90",
+      "stock": 260,
+      "category": 8
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 38,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Molho de Tomate Artesanal",
+      "description": "Produzido com tomates selecionados.",
+      "price": "12.90",
+      "stock": 340,
+      "category": 8
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 39,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Granola Funcional 400g",
+      "description": "Mistura de aveia, sementes e mel.",
+      "price": "24.90",
+      "stock": 180,
+      "category": 8
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 40,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Chocolates Sortidos 250g",
+      "description": "Seleção de bombons premium.",
+      "price": "39.90",
+      "stock": 95,
+      "category": 8
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 41,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Mouse Gamer",
+      "description": "Alta precisão, botões programáveis.",
+      "price": "159.90",
+      "stock": 130,
+      "category": 9
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 42,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Teclado Mecânico RGB",
+      "description": "Switches azuis, iluminação personalizável.",
+      "price": "299.90",
+      "stock": 85,
+      "category": 9
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 43,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "SSD 1TB",
+      "description": "Leitura e escrita rápidas.",
+      "price": "499.00",
+      "stock": 60,
+      "category": 9
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 44,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Monitor 24 polegadas",
+      "description": "Full HD, HDMI e VGA.",
+      "price": "799.00",
+      "stock": 25,
+      "category": 9
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 45,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Hub USB 7 portas",
+      "description": "Expande conexões USB facilmente.",
+      "price": "59.90",
+      "stock": 210,
+      "category": 9
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 46,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Guitarra Elétrica Starter",
+      "description": "Inclui case e cabos básicos.",
+      "price": "899.00",
+      "stock": 20,
+      "category": 10
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 47,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Violão Folk Aço",
+      "description": "Tampo sólido e timbre equilibrado.",
+      "price": "699.00",
+      "stock": 35,
+      "category": 10
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 48,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Afinador Digital",
+      "description": "Precisão para instrumentos de corda.",
+      "price": "39.90",
+      "stock": 300,
+      "category": 10
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 49,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Cabo P10",
+      "description": "Cabo profissional para instrumentos.",
+      "price": "29.90",
+      "stock": 420,
+      "category": 10
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 50,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Caixa de Som Monitor",
+      "description": "Para estúdio doméstico.",
+      "price": "1299.00",
+      "stock": 15,
+      "category": 10
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 51,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Caderno Universitário 200 folhas",
+      "description": "Capa dura, folhas pautadas.",
+      "price": "14.90",
+      "stock": 500,
+      "category": 11
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 52,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Caneta Esferográfica 10 unidades",
+      "description": "Ponta média, tinta preta.",
+      "price": "9.90",
+      "stock": 600,
+      "category": 11
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 53,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Estojo Organizador",
+      "description": "Vários compartimentos para materiais.",
+      "price": "39.90",
+      "stock": 200,
+      "category": 11
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 54,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Mochila Escolar Infantil",
+      "description": "Design temático e confortável.",
+      "price": "129.90",
+      "stock": 140,
+      "category": 11
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 55,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Agenda 2026",
+      "description": "Organize seus compromissos.",
+      "price": "24.90",
+      "stock": 230,
+      "category": 11
+    }
+  },
+
+  {
+    "model": "app.product",
+    "pk": 56,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Vaso Autoirrigável 3L",
+      "description": "Prático para plantas internas.",
+      "price": "99.90",
+      "stock": 110,
+      "category": 12
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 57,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Adubo Orgânico 5kg",
+      "description": "Para hortas e vasos.",
+      "price": "39.90",
+      "stock": 220,
+      "category": 12
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 58,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Tesoura de Poda",
+      "description": "Aço temperado, cabo ergonômico.",
+      "price": "69.90",
+      "stock": 150,
+      "category": 12
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 59,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Sementes Mistura Flores",
+      "description": "Pacote com diversas variedades.",
+      "price": "19.90",
+      "stock": 300,
+      "category": 12
+    }
+  },
+  {
+    "model": "app.product",
+    "pk": 60,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z",
+      "name": "Regador 5L",
+      "description": "Boca longa para vasos.",
+      "price": "49.90",
+      "stock": 130,
+      "category": 12
+    }
+  },
+
+
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": { "username": "user1", "email": "user1@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": { "username": "user2", "email": "user2@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": { "username": "user3", "email": "user3@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": { "username": "user4", "email": "user4@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": { "username": "user5", "email": "user5@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": { "username": "user6", "email": "user6@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 7,
+    "fields": { "username": "user7", "email": "user7@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": { "username": "user8", "email": "user8@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": { "username": "user9", "email": "user9@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": { "username": "user10", "email": "user10@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 11,
+    "fields": { "username": "user11", "email": "user11@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": { "username": "user12", "email": "user12@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": { "username": "user13", "email": "user13@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": { "username": "user14", "email": "user14@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 15,
+    "fields": { "username": "user15", "email": "user15@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 16,
+    "fields": { "username": "user16", "email": "user16@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 17,
+    "fields": { "username": "user17", "email": "user17@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 18,
+    "fields": { "username": "user18", "email": "user18@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 19,
+    "fields": { "username": "user19", "email": "user19@example.com", "is_active": true }
+  },
+  {
+    "model": "auth.user",
+    "pk": 20,
+    "fields": { "username": "user20", "email": "user20@example.com", "is_active": true }
+  },
+
+
+  {
+    "model": "app.cart",
+    "pk": 1,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 1 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 2,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 2 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 3,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 3 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 4,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 4 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 5,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 5 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 6,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 6 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 7,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 7 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 8,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 8 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 9,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 9 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 10,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 10 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 11,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 11 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 12,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 12 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 13,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 13 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 14,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 14 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 15,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 15 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 16,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 16 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 17,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 17 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 18,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 18 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 19,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 19 }
+  },
+  {
+    "model": "app.cart",
+    "pk": 20,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "user": 20 }
+  },
+
+
+  {
+    "model": "app.cartitem",
+    "pk": 1,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 1, "product": 1, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 2,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 1, "product": 6, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 3,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 1, "product": 11, "quantity": 3 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 4,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 1, "product": 22, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 5,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 1, "product": 35, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 6,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 1, "product": 41, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 7,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 2, "product": 2, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 8,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 2, "product": 7, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 9,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 2, "product": 12, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 10,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 2, "product": 23, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 11,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 2, "product": 34, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 12,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 2, "product": 50, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 13,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 3, "product": 3, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 14,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 3, "product": 8, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 15,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 3, "product": 13, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 16,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 3, "product": 21, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 17,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 3, "product": 36, "quantity": 3 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 18,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 3, "product": 45, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 19,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 4, "product": 4, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 20,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 4, "product": 9, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 21,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 4, "product": 14, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 22,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 4, "product": 27, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 23,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 4, "product": 38, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 24,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 4, "product": 52, "quantity": 4 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 25,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 5, "product": 5, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 26,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 5, "product": 10, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 27,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 5, "product": 15, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 28,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 5, "product": 28, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 29,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 5, "product": 39, "quantity": 3 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 30,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 5, "product": 57, "quantity": 5 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 31,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 6, "product": 16, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 32,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 6, "product": 17, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 33,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 6, "product": 18, "quantity": 4 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 34,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 6, "product": 19, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 35,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 6, "product": 20, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 36,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 6, "product": 31, "quantity": 2 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 37,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 7, "product": 24, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 38,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 7, "product": 25, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 39,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 7, "product": 29, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 40,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 7, "product": 33, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 41,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 7, "product": 44, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 42,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 7, "product": 55, "quantity": 2 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 43,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 8, "product": 30, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 44,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 8, "product": 32, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 45,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 8, "product": 37, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 46,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 8, "product": 40, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 47,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 8, "product": 46, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 48,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 8, "product": 49, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 49,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 9, "product": 42, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 50,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 9, "product": 43, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 51,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 9, "product": 47, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 52,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 9, "product": 48, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 53,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 9, "product": 54, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 54,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 9, "product": 56, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 55,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 10, "product": 17, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 56,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 10, "product": 26, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 57,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 10, "product": 38, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 58,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 10, "product": 11, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 59,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 10, "product": 1, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 60,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 10, "product": 60, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 61,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 11, "product": 5, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 62,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 11, "product": 15, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 63,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 11, "product": 20, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 64,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 11, "product": 31, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 65,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 11, "product": 46, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 66,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 11, "product": 53, "quantity": 2 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 67,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 12, "product": 6, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 68,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 12, "product": 13, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 69,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 12, "product": 19, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 70,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 12, "product": 24, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 71,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 12, "product": 36, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 72,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 12, "product": 59, "quantity": 3 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 73,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 13, "product": 2, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 74,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 13, "product": 9, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 75,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 13, "product": 14, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 76,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 13, "product": 27, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 77,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 13, "product": 38, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 78,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 13, "product": 51, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 79,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 14, "product": 4, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 80,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 14, "product": 18, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 81,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 14, "product": 25, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 82,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 14, "product": 30, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 83,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 14, "product": 41, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 84,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 14, "product": 58, "quantity": 2 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 85,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 15, "product": 3, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 86,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 15, "product": 7, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 87,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 15, "product": 21, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 88,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 15, "product": 34, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 89,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 15, "product": 47, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 90,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 15, "product": 60, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 91,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 16, "product": 10, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 92,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 16, "product": 16, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 93,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 16, "product": 26, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 94,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 16, "product": 35, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 95,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 16, "product": 48, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 96,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 16, "product": 55, "quantity": 2 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 97,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 17, "product": 11, "quantity": 3 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 98,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 17, "product": 19, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 99,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 17, "product": 28, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 100,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 17, "product": 33, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 101,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 17, "product": 42, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 102,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 17, "product": 54, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 103,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 18, "product": 6, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 104,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 18, "product": 12, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 105,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 18, "product": 15, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 106,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 18, "product": 29, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 107,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 18, "product": 37, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 108,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 18, "product": 44, "quantity": 1 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 109,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 19, "product": 8, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 110,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 19, "product": 17, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 111,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 19, "product": 23, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 112,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 19, "product": 38, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 113,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 19, "product": 49, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 114,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 19, "product": 59, "quantity": 2 }
+  },
+
+  {
+    "model": "app.cartitem",
+    "pk": 115,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 20, "product": 20, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 116,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 20, "product": 27, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 117,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 20, "product": 34, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 118,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 20, "product": 45, "quantity": 1 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 119,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 20, "product": 53, "quantity": 2 }
+  },
+  {
+    "model": "app.cartitem",
+    "pk": 120,
+    "fields": {
+      "created_at": "2025-09-16T12:00:00Z",
+      "updated_at": "2025-09-16T12:00:00Z", "cart": 20, "product": 60, "quantity": 1 }
+  }
+]
