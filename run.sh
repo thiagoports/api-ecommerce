@@ -49,6 +49,8 @@ if not User.objects.filter(username='admin').exists():
 else:
     print('Superuser already exists')
 "
+echo "Running mock"
+python manage.py loaddata mock_data.json
 
 echo "Starting server at http://127.0.0.1:$PORT ..."
 python manage.py runserver
