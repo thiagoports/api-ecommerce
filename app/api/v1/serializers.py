@@ -1,7 +1,10 @@
 from rest_framework import serializers
-from app.models import Category, Product, Cart, CartItem
+from django.contrib.auth.models import User
+from app.models import Category, Product, Cart, CartItem, Cliente
 
 # Serializer: Traduz dados do modelo para um formato web (ex: JSON) e vice-versa, além de validar os dados de entrada
+
+
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,7 +30,28 @@ class CartSerializer(serializers.ModelSerializer):
     items = CartItemSerializer(many=True,read_only=True)
     class Meta:
         model = Cart
-        fields = ['id', 'user', 'items']
+        fields = ['id', 'cliente', 'items']
 
+class ClienteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cliente
+        fields = ['cpf', 'telefone', 'data_nascimento']
 
+class UserClienteSerializer(serializers.ModelSerializer):
+    cliente = ClienteSerializer()
+
+    class Meta:
+        models = User
+        fields = ['id', 'username', 'first_name', 'last_name', 'email', 'cliente']
+
+class UserCreateSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
+    class Meta:
+        model = User
+        fields = ['username', 'password','email','first_name','last_name']
+
+    def create(self, validated_data):
+        user = User.objects.create_user(**validated_data)
+        return user
 

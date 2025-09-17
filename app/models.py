@@ -2,6 +2,18 @@ from django.db import models
 from django.contrib.auth.models import User
 from .core.models import BaseModel
 
+class Cliente(BaseModel):
+    # ligação do user padrão com o novo modelo de cliente
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='cliente')
+
+    cpf = models.CharField(max_length=14, unique=True, null=True, blank=True, verbose_name='CPF')
+    telefone = models.CharField(max_length=20, null=True, blank=True)
+    data_nascimento = models.DateField(null=True, blank=True, verbose_name='Data de nascimento')
+
+    def __str__(self):
+        return self.user.get_full_name() or self.user.username
+    
+
 class Category(BaseModel):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
@@ -20,10 +32,10 @@ class Product(BaseModel):
         return self.name
 
 class Cart(BaseModel):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    cliente = models.OneToOneField(Cliente, on_delete=models.CASCADE, related_name='cart')
 
     def __str__(self):
-        return f"Carrinho de {self.user.username}"
+        return f"Carrinho de {self.cliente.user.username}"
 
 class CartItem(BaseModel):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='items')
