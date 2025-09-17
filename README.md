@@ -61,6 +61,7 @@ python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate  # Windows
 pip install -r requirements.txt
+python manage.py createsuperuser # Preencher com seus dados
 python manage.py loaddata mock_data.json # Caso necessário
 ```
 ---
