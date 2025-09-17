@@ -1,4 +1,4 @@
-# 🛒 E-commerce API - Django REST Framework
+<h1 align="center">🛒 E-commerce API - Django REST Framework</h1>
 
 Este projeto é uma API para um sistema de e-commerce, desenvolvida com Django e Django REST Framework. A API oferece funcionalidades como gerenciamento de produtos, categorias, carrinho de compras e autenticação via JWT.
 
