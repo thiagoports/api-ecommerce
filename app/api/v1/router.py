@@ -13,7 +13,6 @@ routerv1.register(r'products', ProductViewSet)
 routerv1.register(r'carts', CartViewSet)
 routerv1.register(r'cart-items', CartItemViewSet)
 routerv1.register(r'payments', PaymentViewSet)
-routerv1.register(r'cart-items',CartItemViewSet)
 routerv1.register(r'clientes', ClienteViewSet)
 
 urlpatterns = routerv1.urls + [path('register/', UserCreateAPIView.as_view(), name='user-register'),]
