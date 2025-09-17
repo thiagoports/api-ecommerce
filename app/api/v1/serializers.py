@@ -24,10 +24,13 @@ class CategorySerializer(serializers.ModelSerializer):
 class CartItemSerializer(serializers.ModelSerializer):
     # para pegar o produto daquele cart, fazemos:
     product = ProductSerializer(read_only=True)
+    product_id = serializers.PrimaryKeyRelatedField(
+        queryset=Product.objects.all(), source='product', write_only=True
+    )
 
     class Meta:
         model = CartItem
-        fields = ['id', 'product', 'quantity']
+        fields = ['id', 'product', 'quantity', 'product_id']
 
 
 class CartSerializer(serializers.ModelSerializer):

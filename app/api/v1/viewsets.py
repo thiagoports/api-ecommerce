@@ -36,6 +36,23 @@ class CartItemViewSet(viewsets.ModelViewSet):
     serializer_class = CartItemSerializer
     permission_classes = [IsAuthenticated]
 
+    def get_queryset(self):
+        user = self.request.user
+        # Garante que o cliente e o carrinho existam para o usuário
+        cliente, _ = Cliente.objects.get_or_create(user=user)
+        cart, _ = Cart.objects.get_or_create(cliente=cliente)
+        return CartItem.objects.filter(cart=cart)
+
+    # 2. Associa o novo item ao carrinho do usuário automaticamente
+    def perform_create(self, serializer):
+        user = self.request.user
+        # Busca ou cria o cliente e o carrinho para o usuário logado
+        cliente, _ = Cliente.objects.get_or_create(user=user)
+        cart, _ = Cart.objects.get_or_create(cliente=cliente)
+        # Salva o novo item, associando o carrinho encontrado
+        serializer.save(cart=cart)
+
+
 @extend_schema(tags=['Client'])
 class ClienteViewSet(viewsets.ModelViewSet):
     queryset = Cliente.objects.all()

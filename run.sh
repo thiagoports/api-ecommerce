@@ -39,6 +39,9 @@ echo "Running migrations..."
 python manage.py makemigrations app
 python manage.py migrate
 
+echo "Running mock"
+python manage.py loaddata mock_data.json
+
 echo "👤 Checking for superuser..."
 python manage.py shell -c "
 from django.contrib.auth import get_user_model
@@ -49,8 +52,6 @@ if not User.objects.filter(username='admin').exists():
 else:
     print('Superuser already exists')
 "
-echo "Running mock"
-python manage.py loaddata mock_data.json
 
 echo "Starting server at http://127.0.0.1:$PORT ..."
 python manage.py runserver
