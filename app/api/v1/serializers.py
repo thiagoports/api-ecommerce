@@ -38,35 +38,44 @@ class CartSerializer(serializers.ModelSerializer):
         model = Cart
         fields = ['id', 'cliente', 'items']
 
+
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
         fields = ['cpf', 'telefone', 'data_nascimento']
+
 
 class UserClienteSerializer(serializers.ModelSerializer):
     cliente = ClienteSerializer()
 
     class Meta:
         models = User
-        fields = ['id', 'username', 'first_name', 'last_name', 'email', 'cliente']
+        fields = ['id', 'username', 'first_name',
+                  'last_name', 'email', 'cliente']
+
 
 class UserCreateSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
 
     class Meta:
         model = User
-        fields = ['username', 'password','email','first_name','last_name']
+        fields = ['username', 'password', 'email', 'first_name', 'last_name']
 
     def create(self, validated_data):
         user = User.objects.create_user(**validated_data)
         return user
+
+
 class PaymentSerializer(serializers.ModelSerializer):
     cart = CartSerializer(read_only=True)
+    cart_id = serializers.PrimaryKeyRelatedField(
+        queryset=Cart.objects.all(), source='cart', write_only=True
+    )
 
     class Meta:
         model = Payment
-        fields = ['id', 'payment_method',
-                  'amount', 'status', 'paid_at', 'cart']
+        fields = ['id', 'payment_method', 'amount',
+                  'status', 'paid_at', 'cart', 'cart_id']
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
@@ -82,3 +91,4 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         data['user'] = user_data
         
         return data
+        
