@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
-from app.models import Category, Product, Cart, CartItem
-from .serializers import CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer
+from app.models import Category, Product, Cart, CartItem, Payment
+from .serializers import CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer, PaymentSerializer
 from drf_spectacular.utils import extend_schema
 # ViewSet: Agrupa views relacionadas em uma única classe para CRUD (Criar, Ler, Atualizar, Deletar)
 
@@ -31,4 +31,11 @@ class CartViewSet(viewsets.ModelViewSet):
 class CartItemViewSet(viewsets.ModelViewSet):
     queryset = CartItem.objects.all()
     serializer_class = CartItemSerializer
+    permission_classes = [IsAuthenticated]
+
+
+@extend_schema(tags=['Payment'])
+class PaymentViewSet(viewsets.ModelViewSet):
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
     permission_classes = [IsAuthenticated]
