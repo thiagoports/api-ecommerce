@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from app.models import Category, Product, Cart, CartItem, Payment, Cliente
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 # Serializer: Traduz dados do modelo para um formato web (ex: JSON) e vice-versa, além de validar os dados de entrada
 
@@ -66,3 +67,18 @@ class PaymentSerializer(serializers.ModelSerializer):
         model = Payment
         fields = ['id', 'payment_method',
                   'amount', 'status', 'paid_at', 'cart']
+
+
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+
+        user_data = {
+            'id': self.user.id,
+            'username': self.user.username,
+            'email': self.user.email,
+        }
+        
+        data['user'] = user_data
+        
+        return data

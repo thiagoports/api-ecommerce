@@ -2,8 +2,10 @@ from rest_framework import viewsets, generics
 from django.contrib.auth.models import User
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from app.models import Category, Product, Cart, CartItem, Payment, Cliente
-from .serializers import CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer, PaymentSerializer, ClienteSerializer, UserCreateSerializer
+from .serializers import CategorySerializer, ProductSerializer, CartSerializer, CartItemSerializer, PaymentSerializer, ClienteSerializer, UserCreateSerializer, MyTokenObtainPairSerializer
 from drf_spectacular.utils import extend_schema
+from rest_framework_simplejwt.views import TokenObtainPairView
+
 # ViewSet: Agrupa views relacionadas em uma única classe para CRUD (Criar, Ler, Atualizar, Deletar)
 
 
@@ -51,3 +53,6 @@ class PaymentViewSet(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
     permission_classes = [IsAuthenticated]
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer

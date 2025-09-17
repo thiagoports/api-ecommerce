@@ -5,6 +5,7 @@ from django.http import JsonResponse
 from .router.api import api_urls
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from app.api.v1.viewsets import MyTokenObtainPairView
 
 
 def welcome_view(request):
@@ -18,7 +19,7 @@ urlpatterns = [
     # adicionamos o arquivo do .router para que ele direcione a api para a versão desejada
     path('api/', include((api_urls, 'api'), namespace="api")),
 
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'), # 👈 ALTERADO
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
     # Docs
