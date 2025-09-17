@@ -1,12 +1,18 @@
 
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
 from .router.api import api_urls
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 
+def welcome_view(request):
+    return JsonResponse({"message": "Welcome to the API Ecommerce"})
+
+
 urlpatterns = [
+    path('', welcome_view, name='welcome'),
     path('admin/', admin.site.urls),
 
     # adicionamos o arquivo do .router para que ele direcione a api para a versão desejada

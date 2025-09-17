@@ -1,4 +1,4 @@
-# 🛒 E-commerce API - Django REST Framework
+<h1 align="center">🛒 E-commerce API - Django REST Framework</h1>
 
 Este projeto é uma API para um sistema de e-commerce, desenvolvida com Django e Django REST Framework. A API oferece funcionalidades como gerenciamento de produtos, categorias, carrinho de compras e autenticação via JWT.
 
@@ -10,6 +10,7 @@ Este projeto é uma API para um sistema de e-commerce, desenvolvida com Django e
 - JWT Authentication (`djangorestframework-simplejwt`)
 - CORS (`django-cors-headers`)
 - Swagger/OpenAPI (`drf-yasg`)
+- Content Negociation (`XML e YAML`)
 
 ---
 
@@ -54,12 +55,13 @@ Adicione o token nos headers das requisições autenticadas:
 ## 🔧 Configuração do Ambiente
 
 ```sh
-git clone https://github.com/matheuslima25/django-revisao.git
-cd django-revisao
+git clone git@github.com:thiagoports/api-ecommerce.git
+cd api-ecommerce
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate  # Windows
 pip install -r requirements.txt
+python manage.py createsuperuser # Preencher com seus dados
 python manage.py loaddata mock_data.json # Caso necessário
 ```
 ---

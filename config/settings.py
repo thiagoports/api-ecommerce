@@ -68,10 +68,26 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
+    #content negotiation
+    #formatos suportados para as respostas
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework_xml.renderers.XMLRenderer', #XML
+        'rest_framework_yaml.renderers.YAMLRenderer', #YAML
+    ),
+
+    #formatos suportados para entrada 
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+        'rest_framework_xml.parsers.XMLParser', #XML
+        'rest_framework_yaml.parsers.YAMLParser', #YAML
+    ),
+
 }
 
 REST_FRAMEWORK['DEFAULT_PAGINATION_CLASS'] = 'rest_framework.pagination.PageNumberPagination'
-REST_FRAMEWORK['PAGE_SIZE'] = 5
+REST_FRAMEWORK['PAGE_SIZE'] = 10
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Ecommerce api',
