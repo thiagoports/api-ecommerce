@@ -67,6 +67,6 @@ python manage.py loaddata mock_data.json # Caso necessário
 ## 📄 Documentação da API
 Após iniciar o projeto, a documentação interativa Swagger estará disponível em:
 
-- ```http://localhost:8000/swagger/```
+- ```http://localhost:8000/api/docs```
 
 ---
