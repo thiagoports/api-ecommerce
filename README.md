@@ -10,6 +10,7 @@ Este projeto é uma API para um sistema de e-commerce, desenvolvida com Django e
 - JWT Authentication (`djangorestframework-simplejwt`)
 - CORS (`django-cors-headers`)
 - Swagger/OpenAPI (`drf-yasg`)
+- Content Negociation (`XML e YAML`)
 
 ---
 
@@ -54,8 +55,8 @@ Adicione o token nos headers das requisições autenticadas:
 ## 🔧 Configuração do Ambiente
 
 ```sh
-git clone https://github.com/matheuslima25/django-revisao.git
-cd django-revisao
+git clone git@github.com:thiagoports/api-ecommerce.git
+cd api-ecommerce
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate  # Windows
@@ -67,6 +68,6 @@ python manage.py loaddata mock_data.json # Caso necessário
 ## 📄 Documentação da API
 Após iniciar o projeto, a documentação interativa Swagger estará disponível em:
 
-- ```http://localhost:8000/swagger/```
+- ```http://127.0.0.1:8000/api/docs/#/```
 
 ---
