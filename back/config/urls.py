@@ -19,7 +19,7 @@ urlpatterns = [
     # adicionamos o arquivo do .router para que ele direcione a api para a versão desejada
     path('api/', include((api_urls, 'api'), namespace="api")),
 
-    path('api/token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'), # 👈 ALTERADO
+    path('api/token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
     # Docs
