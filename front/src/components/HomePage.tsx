@@ -72,7 +72,7 @@ export const HomePage: React.FC = () => {
               <Link to="/produtos">
                 <Button
                   size="lg"
-                  className="bg-[#6A1B9A] text-[#FFFFFF] hover:bg-gray-100 text-lg px-8 py-6 rounded-xl"
+                  className="bg-[#6A1B9A] hover:bg-[#dfc1f5] border-[#6A1B9A] text-[#ffffff] hover:text-[#6a1b9a] text-lg px-8 py-6 rounded-xl"
                 >
                   Ver Produtos
                 </Button>
@@ -97,7 +97,9 @@ export const HomePage: React.FC = () => {
         </div>
 
         {loadingCats ? (
-          <div className="text-center text-gray-600">Carregando categorias…</div>
+          <div className="text-center text-gray-600">
+            Carregando categorias…
+          </div>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category) => (
@@ -116,7 +118,9 @@ export const HomePage: React.FC = () => {
           </div>
 
           {loadingProds ? (
-            <div className="text-center text-gray-600">Carregando produtos…</div>
+            <div className="text-center text-gray-600">
+              Carregando produtos…
+            </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {featuredProducts.map((product) => (
