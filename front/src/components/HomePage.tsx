@@ -13,7 +13,9 @@ import { slugify } from "../utils/slug";
 
 function mapApiProductToFE(p: ApiProduct): FEProduct {
   const priceNumber =
-    typeof p.price === "string" ? parseFloat(p.price) : ((p.price as unknown) as number);
+    typeof p.price === "string"
+      ? parseFloat(p.price)
+      : (p.price as unknown as number);
 
   const categoryName =
     typeof p.category === "number"
@@ -45,8 +47,7 @@ export const HomePage: React.FC = () => {
     return apiCategories.map((c: any, idx) => ({
       id: Number(c.id ?? idx + 1),
       name: c.name,
-      image:
-        "https://images.unsplash.com/photo-1512446816042-444d641267ee?w=400",
+      image: c.img,
       slug: slugify(c.name),
     }));
   }, [apiCategories]);
