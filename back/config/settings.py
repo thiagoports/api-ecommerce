@@ -28,8 +28,10 @@ DEBUG = env("DEBUG")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+ALLOWED_HOSTS = ["localhost", "127.0.0.1",
+                 "http://localhost:5173", "http://127.0.0.1:5173",]
 
 # Application definition
 
@@ -69,19 +71,19 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 
-    #content negotiation
-    #formatos suportados para as respostas
+    # content negotiation
+    # formatos suportados para as respostas
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
-        'rest_framework_xml.renderers.XMLRenderer', #XML
-        'rest_framework_yaml.renderers.YAMLRenderer', #YAML
+        'rest_framework_xml.renderers.XMLRenderer',  # XML
+        'rest_framework_yaml.renderers.YAMLRenderer',  # YAML
     ),
 
-    #formatos suportados para entrada 
+    # formatos suportados para entrada
     'DEFAULT_PARSER_CLASSES': (
         'rest_framework.parsers.JSONParser',
-        'rest_framework_xml.parsers.XMLParser', #XML
-        'rest_framework_yaml.parsers.YAMLParser', #YAML
+        'rest_framework_xml.parsers.XMLParser',  # XML
+        'rest_framework_yaml.parsers.YAMLParser',  # YAML
     ),
 
 }
