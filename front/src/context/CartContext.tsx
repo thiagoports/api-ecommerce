@@ -1,92 +1,185 @@
 'use client';
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { CartItem, Product } from '../types';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { useAuth } from './AuthContext';
+import { listCartItems, addItemToCart, updateCartItem, removeCartItem } from '../services/cart.service';
+
+import type { Product as FEProduct, CartItem as FECartItem } from '../types';
+
+import type { CartItem as ApiCartItem, Product as ApiProduct } from '../types/api';
+
+function mapApiProductToFE(p: ApiProduct): FEProduct {
+  const priceNumber =
+    typeof p.price === 'string' ? parseFloat(p.price) : (p.price as unknown as number);
+
+  const categoryName =
+    typeof p.category === 'number'
+      ? String(p.category)
+      : (p.category as any)?.name ?? String((p.category as any)?.id ?? '');
+
+  return {
+    id: Number(p.id),
+    name: p.name,
+    price: priceNumber,
+    description: p.description ?? '',
+    category: categoryName,
+
+    image: '',
+    images: [],
+    specs: {},
+    reviews: [],
+    rating: 0,
+    isNew: false,
+    isBestSeller: false,
+  };
+}
+
+function mapApiItemToFE(it: ApiCartItem): FECartItem {
+  return { id: it.id, product: mapApiProductToFE(it.product), quantity: it.quantity };
+}
 
 interface CartContextType {
-  cart: CartItem[];
-  addToCart: (product: Product, quantity?: number) => void;
-  removeFromCart: (productId: number) => void;
-  updateQuantity: (productId: number, quantity: number) => void;
-  clearCart: () => void;
+  cart: FECartItem[];
+  addToCart: (product: FEProduct, quantity?: number) => Promise<void> | void;
+  removeFromCart: (productId: number) => Promise<void> | void;
+  updateQuantity: (productId: number, quantity: number) => Promise<void> | void;
+  clearCart: () => Promise<void> | void;
   getCartTotal: () => number;
   getCartCount: () => number;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
+const LOCAL_KEY = 'ternurinhas-cart';
+
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [cart, setCart] = useState<CartItem[]>(() => {
-    const savedCart = localStorage.getItem('ternurinhas-cart');
-    return savedCart ? JSON.parse(savedCart) : [];
+  const { isAuthenticated } = useAuth();
+  const [cart, setCart] = useState<FECartItem[]>(() => {
+    const raw = localStorage.getItem(LOCAL_KEY);
+    return raw ? JSON.parse(raw) : [];
   });
 
+  const persistLocal = (items: FECartItem[]) => {
+    localStorage.setItem(LOCAL_KEY, JSON.stringify(items));
+  };
+
+  const loadServerCart = async () => {
+    const data = await listCartItems();
+    const items = Array.isArray(data) ? data : (data as any)?.results ?? [];
+    setCart(items.map(mapApiItemToFE));
+  };
+
+  const migrateLocalToServer = async () => {
+    const raw = localStorage.getItem(LOCAL_KEY);
+    const localItems: FECartItem[] = raw ? JSON.parse(raw) : [];
+    if (!localItems.length) return;
+    for (const it of localItems) {
+      await addItemToCart(it.product.id, it.quantity);
+    }
+    localStorage.removeItem(LOCAL_KEY);
+  };
+
   useEffect(() => {
-    localStorage.setItem('ternurinhas-cart', JSON.stringify(cart));
-  }, [cart]);
-
-  const addToCart = (product: Product, quantity: number = 1) => {
-    setCart(prevCart => {
-      const existingItem = prevCart.find(item => item.product.id === product.id);
-      if (existingItem) {
-        return prevCart.map(item =>
-          item.product.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item
-        );
+    (async () => {
+      if (isAuthenticated) {
+        await migrateLocalToServer();
+        await loadServerCart();
+      } else {
+        const raw = localStorage.getItem(LOCAL_KEY);
+        setCart(raw ? JSON.parse(raw) : []);
       }
-      return [...prevCart, { product, quantity }];
-    });
-  };
+    })();
+  }, [isAuthenticated]);
 
-  const removeFromCart = (productId: number) => {
-    setCart(prevCart => prevCart.filter(item => item.product.id !== productId));
-  };
-
-  const updateQuantity = (productId: number, quantity: number) => {
-    if (quantity <= 0) {
-      removeFromCart(productId);
+  const addToCart = async (product: FEProduct, quantity: number = 1) => {
+    if (!isAuthenticated) {
+      setCart(prev => {
+        const existing = prev.find(i => i.product.id === product.id);
+        const next = existing
+          ? prev.map(i =>
+            i.product.id === product.id ? { ...i, quantity: i.quantity + quantity } : i
+          )
+          : [...prev, { id: Date.now(), product, quantity }];
+        persistLocal(next);
+        return next;
+      });
       return;
     }
-    setCart(prevCart =>
-      prevCart.map(item =>
-        item.product.id === productId ? { ...item, quantity } : item
-      )
-    );
+    await addItemToCart(product.id, quantity);
+    await loadServerCart();
   };
 
-  const clearCart = () => {
-    setCart([]);
+  const updateQuantity = async (productId: number, quantity: number) => {
+    if (quantity <= 0) return removeFromCart(productId);
+
+    if (!isAuthenticated) {
+      setCart(prev => {
+        const next = prev.map(i => (i.product.id === productId ? { ...i, quantity } : i));
+        persistLocal(next);
+        return next;
+      });
+      return;
+    }
+
+    const item = cart.find(i => i.product.id === productId);
+    if (!item) {
+      await addItemToCart(productId, quantity);
+    } else {
+      await updateCartItem(item.id, quantity);
+    }
+    await loadServerCart();
   };
 
-  const getCartTotal = () => {
-    return cart.reduce((total, item) => total + item.product.price * item.quantity, 0);
+  const removeFromCart = async (productId: number) => {
+    if (!isAuthenticated) {
+      setCart(prev => {
+        const next = prev.filter(i => i.product.id !== productId);
+        persistLocal(next);
+        return next;
+      });
+      return;
+    }
+    const item = cart.find(i => i.product.id === productId);
+    if (item) {
+      await removeCartItem(item.id);
+      await loadServerCart();
+    }
   };
 
-  const getCartCount = () => {
-    return cart.reduce((count, item) => count + item.quantity, 0);
+  const clearCart = async () => {
+    if (!isAuthenticated) {
+      setCart([]);
+      localStorage.removeItem(LOCAL_KEY);
+      return;
+    }
+    for (const it of cart) {
+      await removeCartItem(it.id);
+    }
+    await loadServerCart();
   };
 
-  return (
-    <CartContext.Provider
-      value={{
-        cart,
-        addToCart,
-        removeFromCart,
-        updateQuantity,
-        clearCart,
-        getCartTotal,
-        getCartCount,
-      }}
-    >
-      {children}
-    </CartContext.Provider>
+  const getCartTotal = () =>
+    cart.reduce((acc, it) => acc + it.product.price * it.quantity, 0);
+
+  const getCartCount = () => cart.reduce((acc, it) => acc + it.quantity, 0);
+
+  const value = useMemo(
+    () => ({
+      cart,
+      addToCart,
+      removeFromCart,
+      updateQuantity,
+      clearCart,
+      getCartTotal,
+      getCartCount,
+    }),
+    [cart, isAuthenticated]
   );
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
 
 export const useCart = () => {
-  const context = useContext(CartContext);
-  if (!context) {
-    throw new Error('useCart must be used within CartProvider');
-  }
-  return context;
+  const ctx = useContext(CartContext);
+  if (!ctx) throw new Error('useCart must be used within CartProvider');
+  return ctx;
 };
