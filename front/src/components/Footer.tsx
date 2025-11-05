@@ -7,7 +7,6 @@ export const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-gray-300 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <img
               src="https://res.cloudinary.com/dqkpkmicx/image/upload/v1762015890/Group_fkek73.png"
@@ -20,7 +19,6 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-white mb-4">Links Rápidos</h3>
             <ul className="space-y-2 text-sm">
@@ -50,7 +48,6 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Help */}
           <div>
             <h3 className="text-white mb-4">Ajuda</h3>
             <ul className="space-y-2 text-sm">
@@ -78,7 +75,6 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Social Media and Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400">
             © 2025 Ternurinhas Shop. Todos os direitos reservados.

@@ -98,7 +98,6 @@ export const Register: React.FC = () => {
   return (
     <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
-        {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-block">
             <img
@@ -111,10 +110,8 @@ export const Register: React.FC = () => {
           <p className="text-gray-600">Cadastre-se para começar suas compras</p>
         </div>
 
-        {/* Form */}
         <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Name */}
             <div className="space-y-2">
               <Label htmlFor="name">Nome Completo</Label>
               <div className="relative">
@@ -128,11 +125,10 @@ export const Register: React.FC = () => {
                     setName(e.target.value);
                     setErrors({ ...errors, name: "" });
                   }}
-                  className={`pl-10 ${
-                    errors.name
-                      ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                      : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
-                  }`}
+                  className={`pl-10 ${errors.name
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
+                    }`}
                 />
               </div>
               {errors.name && (
@@ -140,7 +136,6 @@ export const Register: React.FC = () => {
               )}
             </div>
 
-            {/* Email */}
             <div className="space-y-2">
               <Label htmlFor="email">E-mail</Label>
               <div className="relative">
@@ -154,11 +149,10 @@ export const Register: React.FC = () => {
                     setEmail(e.target.value);
                     setErrors({ ...errors, email: "" });
                   }}
-                  className={`pl-10 ${
-                    errors.email
-                      ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                      : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
-                  }`}
+                  className={`pl-10 ${errors.email
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
+                    }`}
                 />
               </div>
               {errors.email && (
@@ -166,7 +160,6 @@ export const Register: React.FC = () => {
               )}
             </div>
 
-            {/* Password */}
             <div className="space-y-2">
               <Label htmlFor="password">Senha</Label>
               <div className="relative">
@@ -180,11 +173,10 @@ export const Register: React.FC = () => {
                     setPassword(e.target.value);
                     setErrors({ ...errors, password: "" });
                   }}
-                  className={`pl-10 pr-10 ${
-                    errors.password
-                      ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                      : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
-                  }`}
+                  className={`pl-10 pr-10 ${errors.password
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
+                    }`}
                 />
                 <button
                   type="button"
@@ -202,8 +194,6 @@ export const Register: React.FC = () => {
                 <p className="text-sm text-red-600">{errors.password}</p>
               )}
             </div>
-
-            {/* Confirm Password */}
             <div className="space-y-2">
               <Label htmlFor="confirmPassword">Confirmar Senha</Label>
               <div className="relative">
@@ -217,11 +207,10 @@ export const Register: React.FC = () => {
                     setConfirmPassword(e.target.value);
                     setErrors({ ...errors, confirmPassword: "" });
                   }}
-                  className={`pl-10 pr-10 ${
-                    errors.confirmPassword
-                      ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                      : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
-                  }`}
+                  className={`pl-10 pr-10 ${errors.confirmPassword
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
+                    }`}
                 />
                 <button
                   type="button"
@@ -240,7 +229,6 @@ export const Register: React.FC = () => {
               )}
             </div>
 
-            {/* Submit Button */}
             <Button
               type="submit"
               disabled={isLoading}
@@ -250,7 +238,6 @@ export const Register: React.FC = () => {
             </Button>
           </form>
 
-          {/* Login Link */}
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Já tem uma conta?{" "}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, Star } from "lucide-react";
-import { Product } from "../types/index";
+import { type Product } from "../types";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { useCart } from "../context/CartContext";
@@ -17,10 +17,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     addToCart(product);
-    toast.success("Produto adicionado ao carrinho!", {
-      duration: 2000,
-    });
+    toast.success("Produto adicionado ao carrinho!", { duration: 2000 });
   };
+
+  const img =
+    product.image && product.image.trim()
+      ? product.image
+      : "https://images.unsplash.com/photo-1585386959984-a41552231658?w=800";
+
+  const rating = Number.isFinite(product.rating) ? product.rating : 0;
 
   return (
     <Link
@@ -29,19 +34,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     >
       <div className="relative aspect-square overflow-hidden bg-gray-100">
         <img
-          src={product.image}
+          src={img}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         {product.isNew && (
-          <Badge className="absolute top-3 left-3 bg-[#6A1B9A] text-white">
-            Novo
-          </Badge>
+          <Badge className="absolute top-3 left-3 bg-[#6A1B9A] text-white">Novo</Badge>
         )}
         {product.isBestSeller && (
-          <Badge className="absolute top-3 right-3 bg-green-600 text-white">
-            Mais Vendido
-          </Badge>
+          <Badge className="absolute top-3 right-3 bg-green-600 text-white">Mais Vendido</Badge>
         )}
       </div>
 
@@ -54,23 +55,15 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {[...Array(5)].map((_, i) => (
             <Star
               key={i}
-              className={`w-4 h-4 ${
-                i < Math.floor(product.rating)
-                  ? "fill-yellow-400 text-yellow-400"
-                  : "text-gray-300"
-              }`}
+              className={`w-4 h-4 ${i < Math.floor(rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+                }`}
             />
           ))}
-          <span className="text-sm text-gray-600 ml-1">({product.rating})</span>
+          <span className="text-sm text-gray-600 ml-1">({rating})</span>
         </div>
 
         <div className="flex items-center justify-between">
-          <div>
-            <p className="text-2xl text-[#6A1B9A]">
-              R$ {product.price.toFixed(2)}
-            </p>
-          </div>
-
+          <p className="text-2xl text-[#6A1B9A]">R$ {product.price.toFixed(2)}</p>
           <Button
             size="sm"
             onClick={handleAddToCart}

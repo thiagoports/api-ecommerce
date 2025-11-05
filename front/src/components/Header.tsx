@@ -28,7 +28,6 @@ export const Header: React.FC = () => {
     <header className="sticky top-0 z-50 bg-[#6A1B9A] shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
             <img
               src="https://res.cloudinary.com/dqkpkmicx/image/upload/v1762015890/Group_fkek73.png"
@@ -37,7 +36,6 @@ export const Header: React.FC = () => {
             />
           </Link>
 
-          {/* Desktop Search */}
           <form
             onSubmit={handleSearch}
             className="hidden md:flex flex-1 max-w-2xl mx-8"
@@ -59,7 +57,6 @@ export const Header: React.FC = () => {
             </div>
           </form>
 
-          {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
             <Link
               to="/carrinho"
@@ -75,7 +72,7 @@ export const Header: React.FC = () => {
 
             {user ? (
               <div className="flex items-center gap-3">
-                <span className="text-sm text-white">Olá, {user.name}</span>
+                <span className="text-sm text-white">Olá, {user.username}</span>
                 <Button
                   variant="outline"
                   size="sm"
@@ -98,7 +95,6 @@ export const Header: React.FC = () => {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 hover:bg-white/10 rounded-lg text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -111,7 +107,6 @@ export const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Search */}
         <form onSubmit={handleSearch} className="md:hidden pb-4">
           <div className="relative">
             <Input
@@ -131,7 +126,6 @@ export const Header: React.FC = () => {
         </form>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-white/20 bg-[#6A1B9A]">
           <div className="max-w-7xl mx-auto px-4 py-4 space-y-4">
@@ -155,7 +149,7 @@ export const Header: React.FC = () => {
               <>
                 <div className="p-3 bg-white/10 rounded-lg">
                   <p className="text-sm text-white/80">Logado como</p>
-                  <p className="text-white">{user.name}</p>
+                  <p className="text-white">{user.username}</p>
                 </div>
                 <Button
                   variant="outline"

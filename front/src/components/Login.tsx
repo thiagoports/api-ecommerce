@@ -43,16 +43,12 @@ export const Login: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     setIsLoading(true);
-
     try {
-      const success = await login(email, password);
-      if (success) {
+      const ok = await login(email, password);
+      if (ok) {
         toast.success("Login realizado com sucesso!");
         navigate("/");
       } else {
@@ -69,7 +65,6 @@ export const Login: React.FC = () => {
   return (
     <div className="min-h-[calc(100vh-200px)] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
-        {/* Logo */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-block">
             <img
@@ -79,15 +74,11 @@ export const Login: React.FC = () => {
             />
           </Link>
           <h1 className="text-3xl text-gray-900 mb-2">Bem-vindo de volta</h1>
-          <p className="text-gray-600">
-            Faça login para continuar suas compras
-          </p>
+          <p className="text-gray-600">Faça login para continuar suas compras</p>
         </div>
 
-        {/* Form */}
         <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Email */}
             <div className="space-y-2">
               <Label htmlFor="email">E-mail</Label>
               <div className="relative">
@@ -99,21 +90,17 @@ export const Login: React.FC = () => {
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
-                    setErrors({ ...errors, email: "" });
+                    setErrors((p) => ({ ...p, email: "" }));
                   }}
-                  className={`pl-10 ${
-                    errors.email
-                      ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                      : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
-                  }`}
+                  className={`pl-10 ${errors.email
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
+                    }`}
                 />
               </div>
-              {errors.email && (
-                <p className="text-sm text-red-600">{errors.email}</p>
-              )}
+              {errors.email && <p className="text-sm text-red-600">{errors.email}</p>}
             </div>
 
-            {/* Password */}
             <div className="space-y-2">
               <Label htmlFor="password">Senha</Label>
               <div className="relative">
@@ -125,39 +112,30 @@ export const Login: React.FC = () => {
                   value={password}
                   onChange={(e) => {
                     setPassword(e.target.value);
-                    setErrors({ ...errors, password: "" });
+                    setErrors((p) => ({ ...p, password: "" }));
                   }}
-                  className={`pl-10 pr-10 ${
-                    errors.password
-                      ? "border-red-500 focus:border-red-500 focus:ring-red-500"
-                      : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
-                  }`}
+                  className={`pl-10 pr-10 ${errors.password
+                    ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                    : "focus:border-[#6A1B9A] focus:ring-[#6A1B9A]"
+                    }`}
                 />
                 <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={() => setShowPassword((v) => !v)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                 >
-                  {showPassword ? (
-                    <EyeOff className="w-5 h-5" />
-                  ) : (
-                    <Eye className="w-5 h-5" />
-                  )}
+                  {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
               </div>
-              {errors.password && (
-                <p className="text-sm text-red-600">{errors.password}</p>
-              )}
+              {errors.password && <p className="text-sm text-red-600">{errors.password}</p>}
             </div>
 
-            {/* Forgot Password */}
             <div className="text-right">
-              <a href="#" className="text-sm text-[#6A1B9A] hover:underline">
-                Esqueci minha senha
-              </a>
+              <span className="text-sm text-[#6A1B9A] opacity-60 select-none">
+                &nbsp;
+              </span>
             </div>
 
-            {/* Submit Button */}
             <Button
               type="submit"
               disabled={isLoading}
@@ -167,7 +145,6 @@ export const Login: React.FC = () => {
             </Button>
           </form>
 
-          {/* Register Link */}
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Ainda não tem conta?{" "}
@@ -176,14 +153,6 @@ export const Login: React.FC = () => {
               </Link>
             </p>
           </div>
-        </div>
-
-        {/* Demo Info */}
-        <div className="mt-6 p-4 bg-[#E0BFEF]/20 rounded-xl text-center">
-          <p className="text-sm text-gray-600">
-            <strong>Demo:</strong> Use qualquer e-mail válido e senha com 6+
-            caracteres
-          </p>
         </div>
       </div>
     </div>

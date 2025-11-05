@@ -16,7 +16,6 @@ export const ShoppingCart: React.FC = () => {
 
   const calculateShipping = () => {
     if (cep.length === 8) {
-      // Mock shipping calculation
       const cost = Math.random() * 30 + 10;
       setShippingCost(cost);
       toast.success('Frete calculado com sucesso!');
@@ -65,7 +64,6 @@ export const ShoppingCart: React.FC = () => {
       </h1>
 
       <div className="grid lg:grid-cols-3 gap-8">
-        {/* Cart Items */}
         <div className="lg:col-span-2 space-y-4">
           {cart.map(item => (
             <div
@@ -97,7 +95,6 @@ export const ShoppingCart: React.FC = () => {
                   </p>
 
                   <div className="flex items-center justify-between">
-                    {/* Quantity Controls */}
                     <div className="flex items-center border border-gray-300 rounded-lg">
                       <button
                         onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
@@ -116,7 +113,6 @@ export const ShoppingCart: React.FC = () => {
                       </button>
                     </div>
 
-                    {/* Remove Button */}
                     <button
                       onClick={() => {
                         removeFromCart(item.product.id);
@@ -128,7 +124,6 @@ export const ShoppingCart: React.FC = () => {
                     </button>
                   </div>
 
-                  {/* Subtotal */}
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <p className="text-sm text-gray-600">
                       Subtotal: <span className="text-gray-900">R$ {(item.product.price * item.quantity).toFixed(2)}</span>
@@ -140,14 +135,12 @@ export const ShoppingCart: React.FC = () => {
           ))}
         </div>
 
-        {/* Order Summary */}
         <div className="lg:col-span-1">
           <div className="bg-white rounded-xl border border-gray-200 p-6 sticky top-24">
             <h2 className="text-xl text-gray-900 mb-6">
               Resumo do Pedido
             </h2>
 
-            {/* Shipping Calculator */}
             <div className="mb-6">
               <label className="text-sm text-gray-700 mb-2 block">
                 Calcular Frete
@@ -178,7 +171,6 @@ export const ShoppingCart: React.FC = () => {
 
             <Separator className="my-6" />
 
-            {/* Price Breakdown */}
             <div className="space-y-3 mb-6">
               <div className="flex justify-between text-gray-700">
                 <span>Subtotal</span>
@@ -194,7 +186,6 @@ export const ShoppingCart: React.FC = () => {
 
             <Separator className="my-6" />
 
-            {/* Total */}
             <div className="flex justify-between items-center mb-6">
               <span className="text-lg text-gray-900">Total</span>
               <span className="text-2xl text-[#6A1B9A]">
@@ -202,7 +193,6 @@ export const ShoppingCart: React.FC = () => {
               </span>
             </div>
 
-            {/* Checkout Button */}
             <Button
               onClick={handleCheckout}
               className="w-full bg-[#6A1B9A] hover:bg-[#7D22B2] text-white h-12 text-lg"
@@ -211,7 +201,6 @@ export const ShoppingCart: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
 
-            {/* Additional Info */}
             <div className="mt-6 space-y-2 text-sm text-gray-600">
               <p className="flex items-center gap-2">
                 <span className="text-green-600">✓</span>
