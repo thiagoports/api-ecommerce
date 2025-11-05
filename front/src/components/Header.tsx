@@ -77,7 +77,7 @@ export const Header: React.FC = () => {
                   variant="outline"
                   size="sm"
                   onClick={logout}
-                  className="border-white text-white hover:bg-white hover:text-[#6A1B9A]"
+                  className="border-[#6A1B9A] text-[#6A1B9A]"
                 >
                   Sair
                 </Button>
